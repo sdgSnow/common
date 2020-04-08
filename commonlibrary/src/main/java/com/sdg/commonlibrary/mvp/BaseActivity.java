@@ -53,7 +53,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
         if (mPresenter != null) {
             mPresenter.attachView(this);
         }
-        setStatusBar();
+//        setStatusBar();
         initView();
         initData();
     }

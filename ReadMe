@@ -12,6 +12,18 @@ dependencies {
 	        implementation 'com.github.sdgSnow:common:Tag'
 	}
 
+注意事项：
+1.minSdkVersion 最低要设置19
+2.Invoke-customs are only supported starting with Android O (--min-api 26)错误
+在app的build里面添加
+compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+3.Cannot fit requested classes in a single dex file (# methods: 73230 > 65536)
+在app的build的defaultConfig下添加multiDexEnabled true；
+然后在application里面初始化  MultiDex.install(this);
+
 
 申明：此common的大多功能基本都是运用的第三方，基于他们做了个自己的封装
 base模块：base里面包含可下拉刷新列表功能，toast的封装，指定关闭和跳转activity，调用接口是的加载动画和结束动画，退出APP，权限申请
