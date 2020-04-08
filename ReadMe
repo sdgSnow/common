@@ -1,18 +1,4 @@
 使用手册：
-Step 1. Add the JitPack repository to your build file
-Add it in your root build.gradle at the end of repositories:
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-Step 2. Add the dependency
-dependencies {
-	        implementation 'com.github.sdgSnow:common:Tag'
-	}
-
-
 申明：此common的大多功能基本都是运用的第三方，基于他们做了个自己的封装
 base模块：base里面包含可下拉刷新列表功能，toast的封装，指定关闭和跳转activity，调用接口是的加载动画和结束动画，退出APP，权限申请
 1.关于下拉刷新功能的使用方法
