@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <!--<color name="colorPrimary">#1079CC</color>-->
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#5A8DDF</color>
+
+    <!--分割线-->
+    <color name="line">#F1F1F1</color>
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <!--窗口背景颜色-->
+    <color name="bgColor_alertview_alert">#f8f8f8</color>
+    <color name="bgColor_alertview_alert_start">#f0f0f0</color>
+    <!--标题颜色-->
+    <color name="textColor_alert_title">#000000</color>
+    <color name="textColor_actionsheet_title">#8f8f8f</color>
+    <!--消息颜色-->
+    <color name="textColor_alert_msg">#000000</color>
+    <color name="textColor_actionsheet_msg">#8f8f8f</color>
+    <!--线条颜色-->
+    <color name="bgColor_divier">#d7d7db</color>
+    <!--取消按钮颜色-->
+    <color name="textColor_alert_button_cancel">#007aff</color>
+    <!--高亮按钮颜色-->
+    <color name="textColor_alert_button_destructive">#ff3b30</color>
+    <!--普通按钮文字颜色-->
+    <color name="textColor_alert_button_others">#007aff</color>
+    <!--点击颜色-->
+    <color name="bgColor_alert_button_press">#EAEAEA</color>
+    <!--actionsheet模式的取消按钮背景颜色-->
+    <color name="bgColor_actionsheet_cancel_nor">#ffffff</color>
+
+    <!--开始-->
+    <color name="color_transparent">#00000000</color>
+    <!--    背景色-->
+    <color name="color_bg">#fff1f1f1</color>
+    <!--    标题背景颜色-->
+    <color name="color_blue">#ff4d7ee2</color>
+    <!--    分割线颜色 ffcccccc-->
+    <color name="color_line">#fff1f1f1</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#ff333333</color>
+    <color name="color_green">#ff00c373</color>
+    <color name="color_deep_green">#ff43a047</color>
+    <color name="color_start_c">#4CAF50</color>
+    <color name="color_blue_upload">#1E88E5</color>
+    <color name="color_deep_gray">#ff888888</color>
+    <color name="color_gray">#DCDCDC</color>
+    <color name="color_deep_blue">#f0455679</color>
+    <color name="color_status">#FFEFEA</color>
+
+    <!--    棕色-->
+    <color name="color_brown">#A04200</color>
+    <color name="color_f2">#f2f2f2</color>
+    <color name="color_edittext">#1565C0</color>
+    <!--    橙色 22透明度-->
+    <color name="color_orange_22">#22ff9600</color>
+    <color name="color_orange_0">#FFC305</color>
+    <!--    橙色 ff透明度-->
+    <color name="color_orange_ff">#ffffc305</color>
+    <color name="color_deep_orange">#ff3b30</color>
+    <!-- 按钮按压时的颜色 -->
+    <color name="color_blue_btn_pressed">#153362</color>
+    <color name="color_orange_btn_pressed">#80ff9600</color>
+    <color name="color_green_btn_pressed">#8043a047</color>
+
+    <!-- 按钮禁用时的颜色 -->
+    <color name="color_btn_disable">#BBBBBB</color>
+
+    <color name="simpletooltip_background">@color/colorAccent</color>
+    <color name="simpletooltip_text">@android:color/primary_text_light</color>
+    <color name="simpletooltip_arrow">@color/colorAccent</color>
+    <color name="activity_back">#E6EAF6</color>
+    <color name="type_choose">#1E88E5</color>
+    <color name="type_unchoose">#E6F3FF</color>
+    <color name="ques_back">#ECF5FF</color>
+</resources>

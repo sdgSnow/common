@@ -1,0 +1,92 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api "androidx.appcompat:appcompat:$rootProject.ext.appcompat"
+    api "junit:junit:$rootProject.ext.junit"
+    api "androidx.test:runner:$rootProject.ext.testRunner"
+    api "androidx.test.espresso:espresso-core:$rootProject.ext.espressoCore"
+    api "androidx.constraintlayout:constraintlayout:$rootProject.ext.constraintlayout"
+    api "com.android.support:multidex:$rootProject.ext.multidex"
+
+    // 今日头条屏幕适配
+//    api "me.jessyan:autosize:$rootProject.ext.autosize"
+    //沉浸式状态栏和沉浸式导航栏管理
+    api "com.gyf.immersionbar:immersionbar:$rootProject.ext.immersionbar"
+    // fragment快速实现（可选）
+    api "com.gyf.immersionbar:immersionbar-components:$rootProject.ext.immersionbar"
+    //各种工具类
+    api "com.blankj:utilcodex:$rootProject.ext.utilcodex"
+    //Loading视图
+    api "com.wang.avi:library:$rootProject.ext.loading"
+    //刷新框架
+    api "com.scwang.smartrefresh:SmartRefreshLayout:$rootProject.ext.SmartRefreshLayout"
+    api "com.scwang.smartrefresh:SmartRefreshHeader:$rootProject.ext.SmartRefreshHeader"
+    // 权限请求框架：https://github.com/getActivity/XXPermissions
+    api "com.hjq:xxpermissions:$rootProject.ext.permissions"
+    //网络请求
+    api "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjava2rxjava"
+    api "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxjava2rxandroid"
+    api "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofit2retrofit"
+    api "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofit2convertergson"
+    api "com.squareup.retrofit2:converter-scalars:$rootProject.ext.converter_scalars"
+    api "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retrofit2adapterrxjava2"
+    api "com.squareup.okhttp3:okhttp:$rootProject.ext.okhttp3okhttp"
+    api "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttp3logginginterceptor"
+    api "com.google.code.gson:gson:$rootProject.ext.gson"
+    //标题栏
+    api "androidx.recyclerview:recyclerview:$rootProject.ext.recyclerview"
+    api "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.ext.BaseRecyclerViewAdapterHelper"
+    api "com.airbnb.android:lottie:$rootProject.ext.lottie"
+    api "cn.yc:YCDialogLib:$rootProject.ext.YCDialogLib"
+    //图片加载
+    api "com.github.bumptech.glide:glide:$rootProject.ext.glide"
+    api "com.github.zhaokaiqiang.klog:library:$rootProject.ext.klog"
+    //拍照
+    api "com.github.LuckSiege.PictureSelector:picture_library:$rootProject.ext.picture_library"
+    api "com.qianwen:okhttp-utils:$rootProject.ext.okhttp_utils"
+    //数据库
+    api "org.litepal.android:java:$rootProject.ext.litepal"
+    //标准版
+    api "com.alibaba:fastjson:$rootProject.ext.fastjson"
+    //android版
+    api "com.alibaba:fastjson:$rootProject.ext.fastjson_android"
+    //图片压缩
+    api "top.zibin:Luban:$rootProject.ext.Luban"
+    //阿里云OSS上传
+    api 'com.aliyun.dpa:oss-android-sdk:+'
+    //事件传递
+    api 'org.greenrobot:eventbus:3.1.1'
+    //选择器（时间，日期城市地址之类）
+    api 'com.contrarywind:Android-PickerView:4.1.9'
+    //图片展示
+    api 'com.github.chrisbanes:PhotoView:2.0.0'
+    //轮播图
+    api 'com.youth.banner:banner:1.4.10'  //最新版本
+    //滚动控件
+    api 'com.contrarywind:wheelview:4.1.0'
+    //腾讯bugly
+    api 'com.tencent.bugly:crashreport:latest.release'
+}

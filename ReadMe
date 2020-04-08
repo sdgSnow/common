@@ -1,0 +1,67 @@
+使用手册：
+申明：此common的大多功能基本都是运用的第三方，基于他们做了个自己的封装
+base模块：base里面包含可下拉刷新列表功能，toast的封装，指定关闭和跳转activity，调用接口是的加载动画和结束动画，退出APP，权限申请
+1.关于下拉刷新功能的使用方法
+首先需要在xml里面用SmartRefreshLayout包裹列表recycleview
+然后在activity的initdata里面调用baseAcSmartRefresh方法，传入你用来包裹的SmartRefreshLayout
+最后在重写的refreshTodo方法里面刷新数据
+2.吐司showShort或showLong
+3.gotoActivity或finishActivity
+4.加载showLoading或hideLoading或showTextLoading
+5.退出exit
+6.权限申请，可连续输入多个权限
+
+日志模块
+可直接调用MyLog类
+
+json模块
+包含三个方法
+1.将bean转换成Json字符串 bean2json
+2.将Json字符串转换成对象 json2bject
+3.将json字符串转换成list json2List
+
+oss上传模块
+使用方法：
+首先你需要获取token相关信息，其中包括getAccessKeyId，getAccessKeySecret，getEndpoint，getSecurityToken，getBucketName
+然后创建OSS对象
+OssUtils oss = new OssUtils(MyApplication.getContext())
+                                .setAccessKeyId(value.getAccessKeyId())
+                                .setAccessKeySecret(value.getAccessKeySecret())
+                                .setEndPoint(value.getEndpoint())
+                                .setSecurityToken(value.getSecurityToken())
+                                .setBucket(value.getBucketName())
+                                .build();
+最后调用异步上传oss.asyncUpLoad方法
+
+仿ios的dialog模块
+使用方法：
+例如
+private AlertView alertView;
+public void showTipAlert(String tip, Activity activity) {
+        if (alertView == null) {
+            alertView = new AlertView("", tip, null, new String[]{"确定"}, null, activity, AlertView.Style.Alert, new OnItemClickListener() {
+                @Override
+                public void onItemClick(Object o, int position) {
+                    alertView.dismiss();
+                }
+            });
+        }
+        alertView.setCancelable(true);
+        alertView.setOnDismissListener(new OnDismissListener() {
+            @Override
+            public void onDismiss(Object o) {
+                alertView = null;
+            }
+        });
+        alertView.show();
+}
+
+contentprovider的全局context获取模块
+使用方法：
+首先在你的主工程的清单文件里面添加
+<provider
+            android:name="com.sdg.commonlibrary.provider.ContextProvider"
+            android:authorities="com.sdg.commonlibrary.provider.ContextProvider"
+            android:exported="false" />
+然后在你的application的oncreate方法里面获取context
+Context context = ContextProvider.sContext;

@@ -1,0 +1,6 @@
+需要优化的功能点
+//TODO 待迭代 可让用户自行设置刷新布局
+//TODO 待完善初始化头部
+//TODO willdo 添加加载动图设置
+//TODO 添加handler内显示和停止动画 避免数据过大时动画卡顿
+//TODO 添加BaseAdapter
